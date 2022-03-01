@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Sen', sans-serif; */
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+/* .sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+} */
+
+.nav-container {
+    display: flex;
+    padding: 0 50px;
+    height: 100%;
+    align-items: center;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logo-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.logo {
+    font-size: 30px;
+    color: red;
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    /* background-color: pink; */
+    justify-content: flex-end;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text-container {
+    margin: 0 20px;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 1px;
+    transition: all .5s ease;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon {
+   color: white; 
+   font-size: 20px;
+   margin-bottom: 40px;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container {
+    margin-left: 50px;
+}
+
+
+.featured-content {
+    height: 50vh;
+    padding: 50px;
+    /* background-color: tomato; */
+    /* background: linear-gradient( to bottom, rgba(0,0,0,0), #151515), 
+        url('img/f-1.jpg'); */
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.featured-desc {
+    width: 500px;
+    margin: 20px 0;
+    /* margin: 30px 0; */
+}
+
+.featured-button {
+    background-color: #4dbf00;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-title {
+
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 20px; /* <----------- */
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title, 
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button  {
+   opacity: 1;
+}
+
+.movie-list-item-img {
+    width: 270px; /* <----------- */
+    height: 200px;
+    object-fit: cover;  
+    transition: all 1s ease-in-out;  
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 150px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-button {
+    background-color: #4dbf00;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 120px;
+    top: 90px;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    right: 0;
+}
+
+
+
+.container.active {
+    background-color: white;
+}
+
+.movie-list-title.active {
+    color: black;
+}
+
+.nav-container.active {
+    background-color: white;
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.sidebar.active {
+    background-color: white;
+}
+
+.left-menu-icon.active {
+   color: black; 
+}
+
+@media screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
+}
